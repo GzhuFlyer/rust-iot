@@ -1,0 +1,50 @@
+[package]
+name = "drogue-cloud-server"
+version = "0.10.0"
+authors = ["Ulf Lilleengen <lulf@redhat.com>"]
+edition = "2021"
+
+[dependencies]
+actix-rt = { version = "2.2.0" }
+anyhow = "1"
+clap = { version = "2.33.3" }
+deadpool = "0.9"
+deadpool-postgres = { version = "0.10", features = ["serde", "rt_tokio_1"] }
+diesel = { version = "1.4.0", features = ["postgres"] }
+diesel_migrations = { version = "1.4.0", features = ["postgres"] }
+dotenv = "0.15"
+futures = "0.3"
+keycloak = { version = "14" }
+log = "0.4"
+ntex = "0.5"
+ntex-rt = "0.4"
+pq-sys = { version = "0.4.6" }
+rdkafka-sys = { version = "4.0" }
+reqwest = { version = "0.11.6" }
+sasl2-sys = { version = "0.1.14" }
+serde_json = "1.0"
+stderrlog = { git = "https://github.com/cardoe/stderrlog-rs", rev = "d865acce1ac1eeac66cb20601f25f66b905092c7" }
+tokio = { version = "1.11.0", features = ["full"] }
+url = "2"
+
+drogue-cloud-access-token-service = { path = "../access-token-service" }
+drogue-cloud-authentication-service = { path = "../authentication-service" }
+drogue-cloud-coap-endpoint = { path = "../coap-endpoint" }
+drogue-cloud-command-endpoint = { path = "../command-endpoint" }
+drogue-cloud-console-backend = { path = "../console-backend" }
+drogue-cloud-device-management-service = { path = "../device-management-service" }
+drogue-cloud-device-state-service = { path = "../device-state-service" }
+drogue-cloud-endpoint-common = { path = "../endpoint-common" }
+drogue-cloud-event-common = { path = "../event-common" }
+drogue-cloud-http-endpoint = { path = "../http-endpoint" }
+drogue-cloud-mqtt-common = { path = "../mqtt-common" }
+drogue-cloud-mqtt-endpoint = { path = "../mqtt-endpoint" }
+drogue-cloud-mqtt-integration = { path = "../mqtt-integration" }
+drogue-cloud-registry-events = { path = "../registry-events" }
+drogue-cloud-service-api = { path = "../service-api" }
+drogue-cloud-service-common = { path = "../service-common" }
+drogue-cloud-user-auth-service = { path = "../user-auth-service" }
+drogue-cloud-websocket-integration = { path = "../websocket-integration" }
+
+[features]
+static = ["rdkafka-sys/ssl-vendored", "sasl2-sys/vendored", "sasl2-sys/openssl-sys", "pq-sys/pkg-config"]

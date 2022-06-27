@@ -1,0 +1,56 @@
+[workspace]
+
+members = [
+    # "access-token-service",
+    # "admin-service",
+    # "authentication-service",
+    # "coap-endpoint",
+    # "command-endpoint",
+    # "console-backend",
+    # "console-common",
+    # "database-common",
+    # "device-management-controller",
+    # "device-management-service",
+    # "device-state-service",
+    # "ditto-registry-operator",
+    # "endpoint-common",
+    "event-common",
+    # "http-endpoint",
+    # "integration-common",
+    # "knative-operator",
+    "macros",
+    # "mqtt-common",
+    # "mqtt-endpoint",
+    # "mqtt-integration",
+    # "operator-common",
+    # "outbox-controller",
+    # "registry-events",
+    # "server",
+    "service-api",
+    "service-common",
+    # "test-common",
+    # "topic-admin-operator",
+    # "topic-strimzi-operator",
+    # "ttn-operator",
+    # "user-auth-service",
+    # "websocket-integration",
+]
+# exclude = [
+#     "console-frontend"
+# ]
+
+# [patch.crates-io]
+# testcontainers = { git = "https://github.com/testcontainers/testcontainers-rs", rev = "fe51e06fb2c44b1d3e3fd627cedea3fd582487ef" } # FIXME: awaiting release 0.13
+
+# #reqwest = { git = "https://github.com/ctron/reqwest", branch = "feature/basic_auth_wasm_1" }
+# #drogue-ttn = { git = "https://github.com/drogue-iot/drogue-ttn", rev = "cf0338a344309815f0f05e0d7d76acb712445175" } # FIXME: awaiting release
+
+# drogue-client = { git = "https://github.com/drogue-iot/drogue-client", rev = "3ae242cbc3d334becb30b4a256bfe5aca460df8f" } # FIXME: awaiting release
+# #drogue-client = { path = "../drogue-client" }
+
+# #operator-framework = { git = "https://github.com/ctron/operator-framework", rev = "d4415ccbc03417942f38573a0e164143bae9a25e" } # FIXME: awaiting release
+
+# #pq-sys = { git = "https://github.com/sgrif/pq-sys", rev = "3e367d53019a2740054d5dc6946e07931f1fb70b" } # needed for windows only
+
+# actix-web = { git = "https://github.com/ctron/actix-web", rev = "fcba8a385805405d2733ddb56391e187604dcc34"}
+# actix-http = { git = "https://github.com/ctron/actix-web", rev = "fcba8a385805405d2733ddb56391e187604dcc34"}
